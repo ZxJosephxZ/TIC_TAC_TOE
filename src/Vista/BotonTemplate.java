@@ -17,7 +17,7 @@ public abstract class BotonTemplate {
     private void configurarEstilosComunes()
     {
         boton.setFont(new java.awt.Font("Arial", Font.BOLD, 14));
-        boton.setSize(100,100);
+        boton.setPreferredSize(new Dimension(230,40));
         boton.setBackground(Color.RED);
         boton.setFocusPainted(false);
     }
