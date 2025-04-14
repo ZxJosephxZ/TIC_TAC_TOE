@@ -17,7 +17,7 @@ public abstract class TextoRecuadro extends JTextField {
     private void configurarJTextField()
     {
         texto.setFont(new java.awt.Font("Montserrat", Font.BOLD, 28));
-        texto.setForeground(new Color(249,230,254));
+        texto.setForeground(new Color(101,175,245));
         texto.setHorizontalAlignment(CENTER);
         texto.setPreferredSize(new Dimension(230,40));
     }
