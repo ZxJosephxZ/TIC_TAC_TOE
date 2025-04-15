@@ -24,7 +24,7 @@ public class Main {
 
             // ---------- BOTÓN EN (0,0) ----------
 
-            gbc.insets = new Insets(10, 20, 0, 10); // Espaciado opcional
+            gbc.insets = new Insets(10, 50, 0, 0); // Espaciado opcional
             gbc.fill = GridBagConstraints.BOTH;
 
 
@@ -39,7 +39,7 @@ public class Main {
 
             panel.add(new LabelEspecial().crearBoton(), gbc);
 
-            gbc.insets = new Insets(10,0,0,40);
+            gbc.insets = new Insets(10,0,0,0);
             gbc.gridx = 1;
             gbc.gridy = 1;
             gbc.weightx = 3.0;
@@ -47,20 +47,26 @@ public class Main {
             panel.add(new LabelTitulo().crearBoton(), gbc);
 
 
-            gbc.insets = new Insets(0,0,0,20);
+            gbc.insets = new Insets(0,0,0,0);
             gbc.fill = GridBagConstraints.NONE;
 
             gbc.gridx = 1;
             gbc.gridy = 2;
-
+                gbc.weightx = 0;
             gbc.weighty = 0.2;
             panel.add(new TextoGenerico().crearJtextField(), gbc);
             gbc.gridx = 1;
             gbc.gridy = 3;
+                gbc.weightx = 0;
             gbc.weighty = 0;
             panel.add(new TextoGenerico2().crearJtextField(), gbc);
 
-            gbc.insets = new Insets(0,0,10,30);
+
+
+            gbc.weightx = 3.0;
+
+
+            gbc.insets = new Insets(0,0,10,0);
             gbc.gridx = 1;
             gbc.gridy = 4;
             gbc.weighty = 0.7;
@@ -79,6 +85,21 @@ public class Main {
             gbc.gridy = 3;
             panel.add(new LabelIcon().crearBoton(),gbc);
 
+            gbc.fill = GridBagConstraints.BOTH;
+            gbc.insets = new Insets(0,0,0,40);
+            gbc.gridx = 2;
+            gbc.gridy = 2;
+            gbc.weightx = 1.5;
+            gbc.weighty = 0;
+
+            panel.add(new LabelIcon3().crearBoton(), gbc);
+
+            gbc.gridx = 2;
+            gbc.gridy = 3;
+            gbc.weightx = 1.5;
+            gbc.weighty = 0;
+
+            panel.add(new LabelIcon4().crearBoton(), gbc);
             // ---------- MOSTRAR VENTANA ----------
             window.add(panel);
             window.setVisible(true);

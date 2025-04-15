@@ -2,6 +2,7 @@ package Vista;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -20,10 +21,17 @@ public class LabelEspecial extends LabelTemplate{
                     window.dispose();
                 }
             }
+            @Override
+            public void mouseEntered(MouseEvent e)
+            {
+                label.setForeground(Color.RED);
+            }
 
+            @Override
+            public void mouseExited(MouseEvent e)
+            {
+                label.setForeground(new Color(240,190,255));
+            }
         });
-        {
-
-        };
     }
 }

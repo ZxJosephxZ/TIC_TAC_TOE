@@ -1,7 +1,10 @@
 package Vista;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class LabelIniciar extends LabelTemplate{
     @Override
@@ -13,5 +16,17 @@ public class LabelIniciar extends LabelTemplate{
         label.setCursor(new Cursor(Cursor.HAND_CURSOR));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setVerticalAlignment(SwingConstants.CENTER);
+        Border border = BorderFactory.createLineBorder(new Color(243,211,246),2);
+        label.setBorder(border);
+        label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Window window = SwingUtilities.getWindowAncestor(label);
+                if (window != null)
+                {
+                    window.dispose();
+                }
+            }
+        });
     }
 }
